@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Handlee&display=swap");
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(to right bottom, #ebc3f5, #2c827b);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: sans-serif;
+  font-weight: 100;
+}
+
+h1 {
+  font-family: "Handlee", cursive;
+  margin-left: 30px;
+  margin-top: 10px;
+}

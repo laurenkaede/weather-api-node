@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/navbar.css">
+    <link rel="stylesheet" href="/fiveDay.css">
+    <title>Five Day Forecast</title>
+</head>
+
+<header>
+    {{>navbar}}
+</header>
+
+<body>
+
+    <form action="/fiveDay" method="POST">
+        <h2>Search Forecast:</h2>
+        <input type="text" name="weatherCountryfiveDay" placeholder="Enter Country" />
+
+        <input type="text" name="weatherCityfiveDay" placeholder="Enter City" />
+        <button type="submit" cursor="pointer">Get Five Day Forecast</button>
+    </form>
+
+    {{#if namefiveDay}}
+    <h1>A five day forecast for {{namefiveDay}}, {{countryfiveDay}}:</h1>
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Day</th>
+                    <th>Overview</th>
+                    <th>Description</th>
+                    <th>Temperature (&degC)</th>
+                    <th>Min (&degC)</th>
+                    <th>Max (&degC)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>{{mainfiveDayOne}}</td>
+                    <td>{{descriptionfiveDayOne}}</td>
+                    <td>{{tempfiveDayOne}}</td>
+                    <td>{{tempMinfiveDayOne}}</td>
+                    <td>{{tempMaxfiveDayOne}}</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>{{mainfiveDayTwo}}</td>
+                    <td>{{descriptionfiveDayTwo}}</td>
+                    <td>{{tempfiveDayTwo}}</td>
+                    <td>{{tempMinfiveDayTwo}}</td>
+                    <td>{{tempMaxfiveDayTwo}}</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>{{mainfiveDayThree}}</td>
+                    <td>{{descriptionfiveDayThree}}</td>
+                    <td>{{tempfiveDayThree}}</td>
+                    <td>{{tempMinfiveDayThree}}</td>
+                    <td>{{tempMaxfiveDayThree}}</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>{{mainfiveDayFour}}</td>
+                    <td>{{descriptionfiveDayFour}}</td>
+                    <td>{{tempfiveDayFour}}</td>
+                    <td>{{tempMinfiveDayFour}}</td>
+                    <td>{{tempMaxfiveDayFour}}</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>{{mainfiveDayFive}}</td>
+                    <td>{{descriptionfiveDayFive}}</td>
+                    <td>{{tempfiveDayFive}}</td>
+                    <td>{{tempMinfiveDayFive}}</td>
+                    <td>{{tempMaxfiveDayFive}}</td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+    {{/if}}
+
+    <script src="/main.js"></script>
+
+</html>

@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Handlee&display=swap");
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(to right bottom, #ebc3f5, #5f2c82);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: sans-serif;
+  font-weight: 100;
+}
+
+h1 {
+  font-family: "Handlee", cursive;
+  margin-left: 30px;
+  margin-top: 10px;
+}
+
+h2 {
+  font-family: "Handlee", cursive;
+  margin: 0px 30px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+input {
+  width: 200px;
+  height: 40px;
+  margin-left: 30px;
+  margin-bottom: 30px;
+  border-radius: 5px;
+  border: 1px solid white;
+  padding-left: 5px;
+  font-size: 14px;
+}
+
+button {
+  width: 180px;
+  height: 40px;
+  margin-left: 10px;
+  border-radius: 5px;
+  padding: 0px 10px;
+  background-color: #67397c;
+  color: white;
+  font-size: 14px;
+  border: 1px solid white;
+}
+
+.container {
+  position: absolute;
+  width: 100%;
+  top: 10%;
+  left: 0%;
+}
+
+table {
+  margin-left: 30px;
+  margin-right: 30px;
+  width: 95%;
+  border-collapse: collapse;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+th,
+td {
+  font-family: "Handlee", cursive;
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+th {
+  text-align: center;
+  font-family: "IBM Plex Sans", cursive;
+}
+
+thead th {
+  background-color: #67397c;
+  width: 150px;
+}
+
+tbody tr:hover {
+  background-color: rgba(244, 212, 247, 0.3);
+}
+
+tbody td {
+  position: relative;
+}

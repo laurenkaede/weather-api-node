@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/navbar.css">
+    <link rel="stylesheet" href="/current.css">
+    <title>Current Forecast</title>
+</head>
+
+<header>
+    {{>navbar}}
+</header>
+
+<body>
+
+    <form action="/current" method="POST">
+        <h2>Search Forecast:</h2>
+        <input type="text" name="weatherCountryCurrent" placeholder="Enter Country" />
+        <input type="text" name="weatherCityCurrent" placeholder="Enter City" />
+        <button type="submit">Get Current Forecast</button>
+    </form>
+
+    {{#if nameCurrent}}
+
+    <h1>A current forecast for {{nameCurrent}}, {{countryCurrent}}:</h1>
+
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Overview</th>
+                    <th>Description</th>
+                    <th>Temperature (&degC)</th>
+                    <th>Min (&degC)</th>
+                    <th>Max (&degC)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{mainCurrent}}</td>
+                    <td>{{descriptionCurrent}}</td>
+                    <td>{{tempCurrent}}</td>
+                    <td>{{tempMinCurrent}}</td>
+                    <td>{{tempMaxCurrent}}</td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+
+    {{/if}}
+
+    <script src="/main.js"></script>
+
+</html>
